@@ -44,11 +44,11 @@ player = {
 
 // CREATE BACKGROUND ANIMATION
 function background() {
-	this.x = 0, this.y = 0, this.w = bg.width, this.h = bg.height;
+	this.x = 0, this.y = -1240, this.w = bg.width, this.h = bg.height;
 	this.render = function() {
-		c.drawImage(bg, 0, this.y++);
-		if(this.y <= -100) {
-			this.y = 0;
+		c.drawImage(bg, 0, this.y+=8);
+		if(this.y >= 0) {
+			this.y = -1240;
 		}
 	}
 };
