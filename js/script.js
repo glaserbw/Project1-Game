@@ -9,8 +9,8 @@ window.onload = function() {
 	var framesPerSecond = 30
 		setInterval(function(){
 			drawEverything();
-			moveEverything();
 			findCollision();
+			moveEverything();
 		}, 1000/framesPerSecond );
 		
 	setInterval(function() {
@@ -28,7 +28,7 @@ window.onload = function() {
 
 function drawEverything() {
 	//draws background
-	colorRect(0,0,canvas.width,canvas.height,"black"); 
+	colorRect(0,0,canvas.width,canvas.height,bg.drawColor,bg.img); 
 
 	//draws player
 	colorRect(player.X, player.Y, player.width, player.height, player.drawColor, player.img);
@@ -40,6 +40,7 @@ function drawEverything() {
 
 	//for loop to draw all ememies 
 	for (var i = 0; i < enemies.length; i++) { 
+		// console.log(enemies, i)
 			colorRect(enemies[i].X,enemies[i].Y,enemies[i].width,enemies[i].height,enemies[i].drawColor,enemies[i].img);	
 	};
 };
@@ -49,6 +50,7 @@ function colorRect(leftX, topY, width, height, drawColor, img){
 	canvasContext.fillRect(leftX, topY, width, height);
 
 	var image = document.createElement("img");
+	// console.log(img)
 	image.src=img;
 	canvasContext.drawImage(image, leftX, topY, width, height);
 };

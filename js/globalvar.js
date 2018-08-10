@@ -6,6 +6,12 @@ var canvasContext;
 
 var time = 0 // displays start time
 
+//background variables
+var bg = {
+	drawColor: "black",
+	img: "img/bg.png"
+}
+
 // player object
 var player = {
 	drawColor: "green",
@@ -20,10 +26,11 @@ var enemies = [{
 	// enemy 1
 		drawColor: 'red', // this is the color of the rectangle spawned 
 		X: 100, // enemy starting X coordinates 
-		Y: -300, // enemy starting Y coordinates 
+		Y: 50, // enemy starting Y coordinates 
 		resetY: -300,
-		speed: 5, // enemy start speed 
+		speed: 1, // enemy start speed 
 		speedIncrement: 1, // enemy speed increment 
+		speedReset: 5, //speed to reset after max has been reached 
 		speedMax: 10, // enemy max speed 
 		width: 50, // enemy width  
 		height: 100, // enemy height 
@@ -36,6 +43,7 @@ var enemies = [{
 		resetY: -100,
 		speed: 5,
 		speedIncrement: 2, 
+		speedReset: 5,
 		speedMax: 10,
 		width: 50,
 		height: 100,
@@ -48,6 +56,7 @@ var enemies = [{
 		resetY: -400,
 		speed: 5,
 		speedIncrement: 4, 
+		speedReset: 5,
 		speedMax: 10, 
 		width: 50,
 		height: 100,
@@ -58,8 +67,9 @@ var enemies = [{
 		X: 400,
 		Y: -100,
 		resetY: -250,
-		speed: 5,
+		speed: 6,
 		speedIncrement: 0,
+		speedReset: 5,
 		speedMax: 10,
 		width: 50,
 		height: 100,
@@ -72,6 +82,7 @@ var enemies = [{
 		resetY: -90,
 		speed: 5,
 		speedIncrement: 2, 
+		speedReset: 5,
 		speedMax: 10,
 		width: 50,
 		height: 100,

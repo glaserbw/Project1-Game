@@ -68,14 +68,6 @@ function enemyReset(){
 	enemy1X = getRandomPos();
 	enemy1SpeedY++;
 
-	// if(enemy1SpeedY === 10) {
-	// 	enemy1SpeedY = 5; 
-	// };
-
-	// enemy 2 respawn logic
-	enemy2Y = -100;
-	enemy2X = getRandomPos();
-
 }; 
 
 // End game state - not used yet 
