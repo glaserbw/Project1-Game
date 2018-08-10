@@ -33,8 +33,8 @@ function moveEverything(){
 function enemyReset(taylor){
 	taylor.Y = taylor.resetY;
 	taylor.speed += getRandomSpeed(); //taylor.speedIncrement was here
-	
-	if(taylor.speed >= taylor.speedMax) {
+
+	if(taylor.speed > taylor.speedMax) {
 		taylor.speed = taylor.speedReset; 
 	}
 };
@@ -65,15 +65,20 @@ function findCollision(){
 }; 
 
 function endGame(){ 
-	console.log("You Crashed!!!");
-	colorRect(0,100,600,400,"pink");
 	stop();
+	console.log("You Crashed!!!");
+	colorRect(0,100,600,400,"black");
+	canvasContext.font="30px Helvetica";
+	canvasContext.fillStyle="white"; 
+	canvasContext.fillText("YOU CRASHED AND DIED", 200,300);
+	canvasContext.fillText(("Your Time: " + time), 200,400);
+	canvasContext.fillText(("To restart, press ctrl+R"), 200,500); 
 };
 
 //gets a random speed increment for enemy reset 
 function getRandomSpeed(min, max) {
-  min = 2;
-  max = 10;
+  min = 1;
+  max = 5;
   return Math.floor(Math.random() * (max - min)) + min; 
 };
 
