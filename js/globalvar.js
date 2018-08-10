@@ -6,6 +6,7 @@ var canvasContext;
 
 var time = 0 // displays start time
 
+// interval varibable to clear game on loss 
 var interval; 
 
 //background variables

@@ -27,9 +27,7 @@ window.onload = function() {
 
 function stop() {
 		clearInterval(interval);
-		console.log("stop attempt");
 	};
-
 
 function drawEverything() {
 	
