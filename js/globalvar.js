@@ -98,6 +98,7 @@ var enemies = [{
 		height: 100,
 		img: "img/taxi.png"
 	},{
+	// enemy 6
 	  	drawColor: 'orange',
 		X: 525,
 		Y: getRandomStart(),

@@ -1,8 +1,20 @@
 console.log("Hello World");
 
-window.onload = function() {
-	console.log("onload happened");
-	canvas = document.getElementById('gameCanvas');
+
+document.addEventListener('DOMContentLoaded', function() {
+
+	document.getElementById("startButton").addEventListener("click", startGame);
+});
+
+// window.onload = function()
+
+var startGame = function() {
+
+	clearStartScreen();
+	createCanvas(); 
+
+	console.log("On Load");
+	// canvas = document.getElementById('gameCanvas');
 	canvasContext = canvas.getContext('2d');
 
 	//this refreshes the canvas so all movement is recorded 
@@ -25,9 +37,24 @@ window.onload = function() {
 	};
 };
 
+function createCanvas(){
+		canvas = document.createElement("canvas")
+		canvas.setAttribute("id", "gameCanvas");
+		canvas.setAttribute("width", 600);
+		canvas.setAttribute("height", 700);
+		document.getElementById("gameScreen").appendChild(canvas);
+};
+
+function clearStartScreen(){
+	var startScreen = document.getElementById("startScreen");
+	while (startScreen.firstChild) {
+		startScreen.removeChild(startScreen.firstChild);
+	}
+};
+
 function stop() {
 		clearInterval(interval);
-	};
+};
 
 function drawEverything() {
 	
