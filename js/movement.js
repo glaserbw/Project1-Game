@@ -11,6 +11,15 @@ function calculateMousePos(evt) {
 };
 
 function moveEverything(){
+
+	// moves the road background 
+	bg.Y+=bg.speed;
+	// resets the road background 
+	if(bg.Y >= 0){
+		bg.Y = bg.resetY;
+	}
+
+	// loops through ememies to reset 
 	for(var i = 0; i < enemies.length; i++) {
 		enemies[i].Y += enemies[i].speed; 
 		
@@ -22,8 +31,9 @@ function moveEverything(){
 
 //taylors function to reset EACH car 
 function enemyReset(taylor){
-	taylor.Y = getRandomPos();
+	taylor.Y = taylor.resetY;
 	taylor.speed += getRandomSpeed(); //taylor.speedIncrement was here
+	
 	if(taylor.speed >= taylor.speedMax) {
 		taylor.speed = taylor.speedReset; 
 	}
@@ -31,7 +41,6 @@ function enemyReset(taylor){
 
 function findCollision(){
 	// player coordinate variables
-	console.log(`PlayerX: ${player.x} PlayerY: ${player.y}`)
 		var Px1 = player.X;
 		var Px2 = player.X + player.width;
 
@@ -57,19 +66,14 @@ function findCollision(){
 
 function endGame(){ 
 	console.log("You Crashed!!!");
-};
-
-//gets a random Y position for the car to restart 
-function getRandomPos(min, max) {
-  min = Math.ceil(-canvas.height);
-  max = Math.floor(0);
-  return Math.floor(Math.random() * (max - min)) + min; 
+	colorRect(0,100,600,400,"pink");
+	stop();
 };
 
 //gets a random speed increment for enemy reset 
 function getRandomSpeed(min, max) {
-  min = Math.ceil(5);
-  max = Math.floor(0);
+  min = 2;
+  max = 10;
   return Math.floor(Math.random() * (max - min)) + min; 
 };
 

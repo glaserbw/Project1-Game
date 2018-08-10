@@ -6,9 +6,18 @@ var canvasContext;
 
 var time = 0 // displays start time
 
+var interval; 
+
 //background variables
 var bg = {
 	drawColor: "black",
+	X: 0, 
+	Y: -1160,
+	resetY: -1160,
+	width: 600,
+	height: 1860,
+	heightMax: 460, 
+	speed: 28, 
 	img: "img/bg.png"
 }
 
@@ -25,65 +34,65 @@ var player = {
 var enemies = [{
 	// enemy 1
 		drawColor: 'red', // this is the color of the rectangle spawned 
-		X: 100, // enemy starting X coordinates 
-		Y: 50, // enemy starting Y coordinates 
-		// resetY: -300,
+		X: 35, // enemy starting X coordinates 
+		Y: -50, // enemy starting Y coordinates 
+		resetY: -100,
 		speed: 3, // enemy start speed 
 		// speedIncrement: 1, // enemy speed increment 
 		speedReset: 6, //speed to reset after max has been reached 
-		speedMax: 11, // enemy max speed 
+		speedMax: 15, // enemy max speed 
 		width: 50, // enemy width  
 		height: 100, // enemy height 
 		img: "img/Black_viper.png"
 	},{
 	// enemy 2
 		drawColor: 'blue',
-		X: 200,
+		X: 155,
 		Y: -600,
-		// resetY: -100,
+		resetY: -100,
 		speed: 5,
 		// speedIncrement: 2, 
 		speedReset: 5,
-		speedMax: 10,
+		speedMax: 20,
 		width: 50,
 		height: 100,
 		img: "img/Mini_truck.png"
 	},{
 	// enemy 3
 	 	drawColor: 'orange',
-		X: 300,
+		X: 275,
 		Y: -750,
-		// resetY: -400,
+		resetY: -100,
 		speed: 5,
 		// speedIncrement: 4, 
-		speedReset: 5,
-		speedMax: 10, 
+		speedReset: 3,
+		speedMax: 20, 
 		width: 50,
 		height: 100,
 		img: "img/Mini_van.png"
 	},{
 	// enemy 4
 		drawColor: 'yellow',
-		X: 400,
+		X: 395,
 		Y: -100,
-		// resetY: -250,
+		resetY: -100,
 		speed: 6,
 		// speedIncrement: 0,
-		speedReset: 5,
-		speedMax: 10,
+		speedReset: 6,
+		speedMax: 20,
 		width: 50,
 		height: 100,
 		img: "img/Audi.png"
 	},{
 	//enemy 5
 	  	drawColor: 'pink',
-		X: 500,
+		X: 515,
 		Y: -275,
-		// resetY: -90,
+		resetY: -100,
 		speed: 5,
 		// speedIncrement: 2, 
-		speedReset: 5,
-		speedMax: 10,
+		speedReset: 3,
+		speedMax: 20,
 		width: 50,
 		height: 100,
 		img: "img/taxi.png"
