@@ -67,12 +67,13 @@ function findCollision(){
 function endGame(){ 
 	stop();
 	console.log("You Crashed!!!");
-	colorRect(0,100,600,400,"black");
-	canvasContext.font="30px Helvetica";
-	canvasContext.fillStyle="white"; 
-	canvasContext.fillText("YOU CRASHED AND DIED", 200,300);
-	canvasContext.fillText(("Your Time: " + time), 200,400);
-	canvasContext.fillText(("To restart, press ctrl+R"), 200,500); 
+	colorRect(0,150,600,400,"black");
+	canvasContext.font="40px Helvetica";
+	canvasContext.fillStyle="red"; 
+
+	canvasContext.fillText("YOU CRASHED AND DIED", 50,273);
+	canvasContext.fillText(("Your Time: " + time), 175,373);
+	canvasContext.fillText(("To restart, press ctrl+R"), 95,473); 
 };
 
 //gets a random speed increment for enemy reset 

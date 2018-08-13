@@ -11,20 +11,20 @@ var interval;
 
 //background variables
 var bg = {
-	drawColor: "black",
+	drawColor: "Transparent",
 	X: 0, 
-	Y: -1160,
-	resetY: -1160,
+	Y: -1700,
+	resetY: -1700,
 	width: 600,
-	height: 1860,
+	height: 2400,
 	heightMax: 460, 
 	speed: 28, 
-	img: "img/bg.png"
+	img: "img/bg1.png"
 }
 
 // player object
 var player = {
-	drawColor: "green",
+	drawColor: "Transparent",
 	X: 275,
 	Y: 575,
 	width: 50,
@@ -34,7 +34,7 @@ var player = {
 
 var enemies = [{
 	// enemy 1
-		drawColor: 'red', // this is the color of the rectangle spawned 
+		drawColor: "Transparent", // this is the color of the rectangle spawned 
 		X: 25, // enemy starting X coordinates 
 		Y: getRandomStart(), // enemy starting Y coordinates 
 		resetY: -100,
@@ -47,7 +47,7 @@ var enemies = [{
 		img: "img/Black_viper.png"
 	},{
 	// enemy 2
-		drawColor: 'blue',
+		drawColor: "Transparent",
 		X: 125,
 		Y: getRandomStart(),
 		resetY: -100,
@@ -60,7 +60,7 @@ var enemies = [{
 		img: "img/Mini_truck.png"
 	},{
 	// enemy 3
-	 	drawColor: 'orange',
+	 	drawColor: "Transparent",
 		X: 225,
 		Y: getRandomStart(),
 		resetY: -100,
@@ -73,7 +73,7 @@ var enemies = [{
 		img: "img/Mini_van.png"
 	},{
 	// enemy 4
-		drawColor: 'yellow',
+		drawColor: "Transparent",
 		X: 325,
 		Y: getRandomStart(),
 		resetY: -100,
@@ -86,7 +86,7 @@ var enemies = [{
 		img: "img/Audi.png"
 	},{
 	//enemy 5
-	  	drawColor: 'pink',
+	  	drawColor: "Transparent",
 		X: 425,
 		Y: getRandomStart(),
 		resetY: -100,
@@ -98,8 +98,8 @@ var enemies = [{
 		height: 100,
 		img: "img/taxi.png"
 	},{
-	// enemy 6
-	  	drawColor: 'orange',
+	// enemy 6	
+	  	drawColor: "Transparent",
 		X: 525,
 		Y: getRandomStart(),
 		resetY: -100,

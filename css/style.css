@@ -1,3 +1,45 @@
+
+
+body { 
+  background: #070829;
+  /*background: linear-gradient(top, #070829 0%, #05092b 24%, #08092b 25%, #08092d 30%, #050a2b 32%, #070a2e 35%, #080e31 56%, #090f35 62%, #080f32 63%, #0b1036 64%, #0b0f36 69%, #0a1237 70%, #091136 73%, #0b173f 91%, #0b163c 96%, #2e3135 97%, #2e3135 100%) fixed;*/
+  /*background: linear-gradient(top, #070829 0%,#05092b 24%,#08092b 25%,#08092d 30%,#050a2b 32%,#070a2e 35%,#080e31 56%,#090f35 62%,#080f32 63%,#0b1036 64%,#0b0f36 69%,#0a1237 70%,#091136 73%,#0b173f 91%,#0b163c 96%,#2e3135 97%,#2e3135 100%) fixed;*/
+  background: linear-gradient(to bottom, #070829 0%,#05092b 24%,#08092b 25%,#08092d 30%,#050a2b 32%,#070a2e 35%,#080e31 56%,#090f35 62%,#080f32 63%,#0b1036 64%,#0b0f36 69%,#0a1237 70%,#091136 73%,#0b173f 91%,#0b163c 96%,#0b163c 97%,#0b163c 100%) fixed;
+}
+
+h1 {
+	font-family: 'Audiowide', cursive;
+	font-size: 42px;
+	color: #D82150;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	left: 50%;
+	@include transform(translate(-50%,-50%));
+	background: -webkit-linear-gradient(#D82150, #D82150);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h2 {
+	font-family: 'Audiowide', cursive;
+	font-size: 22px;
+	color: #D82150;
+	margin: 10;
+	padding: 0;
+	left: 50%;
+	@include transform(translate(-50%,-50%));
+	background: -webkit-linear-gradient(#D82150, #D35CEC);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+img {
+	margin-top: 20px;
+	height: 525px;
+    margin-left: auto;
+}
+
 #gameScreen {
 	text-align: center;
 	z-index: -1; 
@@ -6,4 +48,29 @@
 #startScreen {
 	text-align: center;
 	z-index: 1;
+}
+
+#gameCanvas {
+	margin-top: 20px;
+	margin-right: auto;
+    margin-left: auto;
+	box-shadow: 0px 0px 100px #0900ff;
+}
+
+#startButton {
+	font-size: 22px;
+	margin-top: 15px;
+	background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.glow {
+  filter: url(#glow);
+  -webkit-filter: 
+    url(#glow);
+  -moz-filter: 
+    url(#glow);
+  -o-filter: url(#blurFilter);
+  -ms-filter: url(#glow);
 }
